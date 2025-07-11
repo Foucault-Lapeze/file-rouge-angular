@@ -1,36 +1,43 @@
 <div class="container mt-4">
-    <h1 class="mb-4">Liste des cours</h1>
-  
-    <div *ngIf="isLoading" class="text-center">
-      <div class="spinner-border text-primary" role="status"></div>
-      <p>Chargement des cours...</p>
-    </div>
-  
-    <div *ngIf="errorMessage" class="alert alert-danger">
-      {{ errorMessage }}
-    </div>
-  
-    <div class="row" *ngIf="!isLoading && coursList.length > 0">
-      <div class="col-md-4 mb-4" *ngFor="let cours of coursList">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ cours.nom }}</h5>
-            <p class="card-text flex-grow-1">{{ cours.description }}</p>
-            <div class="mt-auto d-flex justify-content-between">
-              <button class="btn btn-warning btn-sm" (click)="modifierCours(cours.id)" title="Modifier">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button class="btn btn-danger btn-sm" (click)="supprimerCours(cours.id)" title="Supprimer">
-                <i class="bi bi-trash"></i>
-              </button>
-            </div>
+  <h1 class="mb-4">Liste des cours</h1>
+
+  <div *ngIf="isLoading" class="text-center">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p>Chargement des cours...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div class="row" *ngIf="!isLoading && coursList.length > 0">
+    <div class="col-md-4 mb-4" *ngFor="let cours of coursList">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ cours.nom }}</h5>
+          <p class="card-text flex-grow-1">{{ cours.description }}</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <button
+              class="btn btn-warning btn-sm"
+              (click)="modifierCours(cours.id)"
+              title="Modifier"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="supprimerCours(cours.id)"
+              title="Supprimer"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  
-    <div *ngIf="!isLoading && coursList.length === 0" class="alert alert-info">
-      Aucun cours disponible.
-    </div>
   </div>
-  
+
+  <div *ngIf="!isLoading && coursList.length === 0" class="alert alert-info">
+    Aucun cours disponible.
+  </div>
+</div>
