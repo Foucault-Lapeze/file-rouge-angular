@@ -1,1 +1,51 @@
-<p>cour-form works!</p>
+<div class="container mt-4" *ngIf="isLoading">
+    <p>Chargement du cours...</p>
+  </div>
+  
+  <div class="container mt-4" *ngIf="errorMessage">
+    <div class="alert alert-danger">{{ errorMessage }}</div>
+  </div>
+  
+  <div class="container mt-4" *ngIf="!isLoading && !errorMessage">
+    <h2>Modifier le cours</h2>
+  
+    <form [formGroup]="courForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom du cours</label>
+        <input
+          id="nom"
+          type="text"
+          class="form-control"
+          formControlName="nom"
+          [class.is-invalid]="courForm.get('nom')?.invalid && courForm.get('nom')?.touched"
+        />
+        <div class="invalid-feedback" *ngIf="courForm.get('nom')?.errors?.['required']">
+          Le nom est requis.
+        </div>
+        <div class="invalid-feedback" *ngIf="courForm.get('nom')?.errors?.['minlength']">
+          Le nom doit contenir au moins 3 caractères.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          id="description"
+          class="form-control"
+          rows="4"
+          formControlName="description"
+          [class.is-invalid]="courForm.get('description')?.invalid && courForm.get('description')?.touched"
+        ></textarea>
+        <div class="invalid-feedback" *ngIf="courForm.get('description')?.errors?.['required']">
+          La description est requise.
+        </div>
+        <div class="invalid-feedback" *ngIf="courForm.get('description')?.errors?.['minlength']">
+          La description doit contenir au moins 5 caractères.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="courForm.invalid">Enregistrer</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="router.navigate(['/cours'])">Annuler</button>
+    </form>
+  </div>
+  

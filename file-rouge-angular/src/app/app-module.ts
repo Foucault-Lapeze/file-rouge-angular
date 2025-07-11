@@ -9,6 +9,7 @@ import { CourForm } from './cour-form/cour-form';
 import { Acceuil } from './acceuil/acceuil';
 import { Header } from './header/header';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,12 @@ import { HttpClientModule } from '@angular/common/http';
     Acceuil,
     Header,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
