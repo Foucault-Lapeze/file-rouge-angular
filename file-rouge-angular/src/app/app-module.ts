@@ -10,6 +10,7 @@ import { Acceuil } from './acceuil/acceuil';
 import { Header } from './header/header';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddCour } from './add-cour/add-cour';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CourForm,
     Acceuil,
     Header,
+    AddCour,
   ],
   imports: [
     BrowserModule,

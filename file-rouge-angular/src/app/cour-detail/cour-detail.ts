@@ -28,7 +28,7 @@ export class CourDetail implements OnInit {
         this.isLoading = false;
       },
       error: () => {
-        this.errorMessage = 'Erreur lors du chargement du cours.';
+        this.errorMessage = 'Erreur lors du chargement du cour.';
         this.isLoading = false;
       },
     });

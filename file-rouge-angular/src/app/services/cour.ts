@@ -31,4 +31,8 @@ export class CourService {
   updateCours(cours: Cours): Observable<Cours> {
     return this.http.put<Cours>(`${this.apiUrl}/${cours.id}`, cours);
   }
+
+  addCours(cours: Cours): Observable<Cours> {
+    return this.http.post<Cours>(this.apiUrl, cours);
+  }
 }

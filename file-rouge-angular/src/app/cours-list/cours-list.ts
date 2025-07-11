@@ -26,7 +26,7 @@ export class CoursListComponent implements OnInit {
         this.isLoading = false;
       },
       error: () => {
-        this.errorMessage = 'Erreur lors du chargement des cours.';
+        this.errorMessage = 'Erreur lors du chargement des courssss.';
         this.isLoading = false;
       },
     });
@@ -51,5 +51,9 @@ export class CoursListComponent implements OnInit {
         },
       });
     }
+  }
+
+  ajouterCours(): void {
+    this.router.navigate(['/ajouter-cours']);
   }
 }

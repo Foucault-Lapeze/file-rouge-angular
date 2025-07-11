@@ -5,6 +5,7 @@ import { Acceuil } from './acceuil/acceuil';
 import { CoursListComponent } from './cours-list/cours-list';
 import { CourDetail } from './cour-detail/cour-detail';
 import { CourForm } from './cour-form/cour-form';
+import { AddCour } from './add-cour/add-cour';
 
 const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'cours/:id', component: CourDetail },
   { path: 'ajouter-cours', component: CourForm },
   { path: 'modifier-cours/:id', component: CourForm },
+  { path: 'ajouter-cour', component: AddCour },
 ];
 
 @NgModule({

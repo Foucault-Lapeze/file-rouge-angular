@@ -39,7 +39,7 @@ export class CourForm implements OnInit {
         this.isLoading = false;
       },
       error: () => {
-        this.errorMessage = 'Erreur lors du chargement du cours.';
+        this.errorMessage = 'Erreur lors du chargement du coursss.';
         this.isLoading = false;
       },
     });

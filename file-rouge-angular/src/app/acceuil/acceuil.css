@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Supprime les scrollbars */
+    background: linear-gradient(135deg, #f0f4ff, #e9efff);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .background-deco {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.25;
+    animation: float 20s ease-in-out infinite alternate;
+  }
+  
+  .blob1 {
+    width: 300px;
+    height: 300px;
+    background: #0d6efd;
+    top: -100px;
+    left: -100px;
+  }
+  
+  .blob2 {
+    width: 250px;
+    height: 250px;
+    background: #6610f2;
+    bottom: -80px;
+    right: -100px;
+  }
+  
+  @keyframes float {
+    0%   { transform: translateY(0px) }
+    100% { transform: translateY(40px) }
+  }
+  
+  /* Ta carte principale */
+  .main-box {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
