@@ -49,6 +49,11 @@
       "id": "f3ea",
       "nom": "Anglais",
       "description": "Cours d'anglais "
+    },
+    {
+      "id": "0c9e",
+      "nom": "mathématique",
+      "description": "cour de mathématique sur le calcul mental  "
     }
   ]
 }
