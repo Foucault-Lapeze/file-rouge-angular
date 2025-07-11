@@ -1,0 +1,15 @@
+{
+    "cours": [
+      { "id": 1, "nom": "Angular débutant", "description": "Introduction à Angular" },
+      { "id": 2, "nom": "React pour les débutants", "description": "Apprenez les bases de React et créez vos premières applications web" },
+      { "id": 3, "nom": "Vue.js intermédiaire", "description": "Approfondissez vos connaissances en Vue.js avec des projets pratiques" },
+      { "id": 4, "nom": "Node.js et Express", "description": "Créez des API avec Node.js et Express" },
+      { "id": 5, "nom": "TypeScript avancé", "description": "Maîtrisez les fonctionnalités avancées de TypeScript" },
+      { "id": 6, "nom": "Développement mobile avec Flutter", "description": "Créez des applications mobiles cross-platform avec Flutter et Dart" },
+      { "id": 7, "nom": "Python pour l’analyse de données", "description": "Manipulez des données avec Pandas, NumPy et Matplotlib" },
+      { "id": 8, "nom": "Introduction à Docker", "description": "Conteneurisez vos applications et gérez-les efficacement" },
+      { "id": 9, "nom": "Sécurité web", "description": "Protégez vos applications web contre les vulnérabilités courantes" },
+      { "id": 10, "nom": "Git et GitHub", "description": "Apprenez à versionner vos projets et collaborer en équipe avec Git et GitHub" }
+    ]
+  }
+  
