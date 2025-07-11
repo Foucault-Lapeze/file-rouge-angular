@@ -1,1 +1,14 @@
-<p>cour-detail works!</p>
+<div class="container mt-4" *ngIf="isLoading">
+  <p>Chargement du cours...</p>
+</div>
+
+<div class="container mt-4" *ngIf="errorMessage">
+  <div class="alert alert-danger">{{ errorMessage }}</div>
+</div>
+
+<div class="container mt-4" *ngIf="cour">
+  <h2>{{ cour.nom }}</h2>
+  <p>{{ cour.description }}</p>
+
+  <a routerLink="/cours" class="btn btn-primary mt-3">Retour à la liste</a>
+</div>

@@ -3,24 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { CoursList } from './cours-list/cours-list';
+import { CoursListComponent } from './cours-list/cours-list';
 import { CourDetail } from './cour-detail/cour-detail';
 import { CourForm } from './cour-form/cour-form';
+import { Acceuil } from './acceuil/acceuil';
+import { Header } from './header/header';
 
 @NgModule({
   declarations: [
     App,
-    CoursList,
+    CoursListComponent,
     CourDetail,
-    CourForm
+    CourForm,
+    Acceuil,
+    Header,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
-  bootstrap: [App]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
