@@ -12,9 +12,8 @@ const routes: Routes = [
   { path: 'acceuil', component: Acceuil },
   { path: 'cours', component: CoursListComponent },
   { path: 'cours/:id', component: CourDetail },
-  { path: 'ajouter-cours', component: CourForm },
+  { path: 'ajouter-cours', component: AddCour },
   { path: 'modifier-cours/:id', component: CourForm },
-  { path: 'ajouter-cour', component: AddCour },
 ];
 
 @NgModule({

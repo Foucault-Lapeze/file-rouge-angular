@@ -26,7 +26,7 @@ export class CoursListComponent implements OnInit {
         this.isLoading = false;
       },
       error: () => {
-        this.errorMessage = 'Erreur lors du chargement des courssss.';
+        this.errorMessage = 'Erreur lors du chargement des cours.';
         this.isLoading = false;
       },
     });
@@ -36,15 +36,19 @@ export class CoursListComponent implements OnInit {
     this.router.navigate(['/cours', id]);
   }
 
-  modifierCours(id: number): void {
+  modifierCours(id?: number): void {
     this.router.navigate(['/modifier-cours', id]);
   }
 
-  supprimerCours(id: number): void {
+  supprimerCours(id?: number): void {
+    if (id === undefined) {
+      console.error('ID du cours manquant');
+      return;
+    }
     if (confirm('Voulez-vous vraiment supprimer ce cours ?')) {
       this.courService.deleteCours(id).subscribe({
         next: () => {
-          this.loadCours(); // recharge la liste après suppression
+          this.loadCours();
         },
         error: () => {
           alert('Erreur lors de la suppression.');

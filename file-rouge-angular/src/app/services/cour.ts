@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Cours {
-  id: number;
+  id?: number;
   nom: string;
   description: string;
 }

@@ -7,7 +7,7 @@ import { CourService, Cours } from '../services/cour';
   selector: 'app-add-cour',
   standalone: false,
   templateUrl: './add-cour.html',
-  styleUrl: './add-cour.css'
+  styleUrls: ['./add-cour.css']
 })
 export class AddCour implements OnInit {
   courForm!: FormGroup;
@@ -35,7 +35,6 @@ export class AddCour implements OnInit {
 
     this.isSubmitting = true;
     const nouveauCours: Cours = {
-      id: 0, 
       nom: this.courForm.value.nom,
       description: this.courForm.value.description
     };

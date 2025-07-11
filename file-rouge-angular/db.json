@@ -3,7 +3,7 @@
     {
       "id": "1",
       "nom": "Angular débutant",
-      "description": "Introduction à Angular lll"
+      "description": "Introduction à Angular"
     },
     {
       "id": "2",
@@ -44,6 +44,11 @@
       "id": "10",
       "nom": "Git et GitHub",
       "description": "Apprenez à versionner vos projets et collaborer en équipe avec Git et GitHub"
+    },
+    {
+      "id": "f3ea",
+      "nom": "Anglais",
+      "description": "Cours d'anglais "
     }
   ]
 }
