@@ -9,10 +9,9 @@ export interface Cours {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CourService {
-
   private apiUrl = 'http://localhost:3000/cours';
 
   constructor(private http: HttpClient) {}

@@ -8,6 +8,7 @@ import { CourDetail } from './cour-detail/cour-detail';
 import { CourForm } from './cour-form/cour-form';
 import { Acceuil } from './acceuil/acceuil';
 import { Header } from './header/header';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { Header } from './header/header';
     Acceuil,
     Header,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

@@ -7,17 +7,16 @@ import { CourDetail } from './cour-detail/cour-detail';
 import { CourForm } from './cour-form/cour-form';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/cours', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/acceuil', pathMatch: 'full' },
   { path: 'acceuil', component: Acceuil },
   { path: 'cours', component: CoursListComponent },
-  { path: 'cours/:id', component: CourDetail }, 
-  { path: 'ajouter-cours', component: CourForm }, 
-  { path: 'modifier-cours/:id', component: CourForm }, 
-  { path: '**', redirectTo: '/cours' } 
+  { path: 'cours/:id', component: CourDetail },
+  { path: 'ajouter-cours', component: CourForm },
+  { path: 'modifier-cours/:id', component: CourForm },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

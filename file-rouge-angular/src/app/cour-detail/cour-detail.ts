@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CourService } from '../services/cour';
-
-interface Cours {
-  id: number;
-  nom: string;
-  description: string;
-}
+import { CourService, Cours } from '../services/cour';
 
 @Component({
   selector: 'app-cour-detail',
@@ -26,10 +20,8 @@ export class CourDetail implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Récupérer l'id depuis l'URL
     this.coursId = Number(this.route.snapshot.paramMap.get('id'));
 
-    // Charger les détails du cours via le service
     this.courService.getCoursById(this.coursId).subscribe({
       next: (data) => {
         this.cour = data;

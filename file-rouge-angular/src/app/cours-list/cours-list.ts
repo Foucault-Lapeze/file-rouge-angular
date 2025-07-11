@@ -6,18 +6,14 @@ import { CourService, Cours } from '../services/cour';
   selector: 'app-cours-list',
   standalone: false,
   templateUrl: './cours-list.html',
-  styleUrls: ['./cours-list.css']
+  styleUrls: ['./cours-list.css'],
 })
 export class CoursListComponent implements OnInit {
-
   coursList: Cours[] = [];
   isLoading = true;
   errorMessage = '';
 
-  constructor(
-    private courService: CourService,
-    private router: Router
-  ) {}
+  constructor(private courService: CourService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadCours();
@@ -32,7 +28,7 @@ export class CoursListComponent implements OnInit {
       error: () => {
         this.errorMessage = 'Erreur lors du chargement des cours.';
         this.isLoading = false;
-      }
+      },
     });
   }
 
@@ -52,7 +48,7 @@ export class CoursListComponent implements OnInit {
         },
         error: () => {
           alert('Erreur lors de la suppression.');
-        }
+        },
       });
     }
   }
